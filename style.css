@@ -1,11 +1,447 @@
-#movie-backdrop {
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html { width:100%; height:100%; margin:0; padding:0; overflow-x:hidden}
+body { width:100%; height:100%; margin:0; padding:0; overflow-x:hidden}
+
+/* actor page css */
+.actor-image {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.actor-container > h3{
+    padding: 10px;
+    background-color: rgb(16, 67, 83);
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+    height: auto;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.single-actor-img {
+    width: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 5px solid rgba(22, 111, 171, 0.378);
+    margin: 10px;
+}
+
+.actor-info{
+    color: white;
+    justify-content: space-between;
+}
+
+.movie-cast-div{
+    margin: 10px;
+}
+
+.movie-cast-div > img {
+    color: white;
+    box-shadow: 0px 0px 8px rgb(3, 71, 67);
+    overflow: hidden;
+    border-top-right-radius:10px ;
+    border-top-left-radius: 10px;
+}
+.movie-cast-div > h6 {
+    padding: 10px;
+    background-color: rgb(16, 67, 83);
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+    height: auto;
+    margin-bottom: 5px;
+    color: white;
+}
+.movie-crew-div{
+    margin: 10px;
+}
+
+.movie-crew-div > img{
+    color: white;
+    box-shadow: 0px 0px 8px rgb(3, 71, 67);
+    overflow: hidden;
+    border-top-right-radius:10px ;
+    border-top-left-radius: 10px;
+}
+
+.movie-crew-div > h5 {
+    padding: 10px;
+    background-color: rgb(16, 67, 83);
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+    height: auto;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.movie-in-cast{
+    color: white;
+}
+.movie-in-crew{
+    color: white;
+}
+/* actor page css */
+.actorCrewList{
+  background-color: rgb(7, 50, 131);
+}
+.actorCrewList .clickable{
+   display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.clickable:hover {
+    cursor:pointer;
+    box-shadow:  0px 1px 20px  rgb(75, 129, 204);
+    transition: all 0.5s;
+}
+
+#container {
+    background: black;
+    background: -webkit-linear-gradient(to right, #1c1f21, #070707);
+    background: linear-gradient(to right, #181a1c, #060606); 
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homePageMovies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
+    gap: 20px;
+    /* width: 1400px; */
+    padding: 10px;
+
+}
+
+.singleHomePageMovie {
+    border-radius: 6px;
+    color: white;
+    box-shadow: 0px 0px 8px rgb(7, 50, 131);
+    overflow: hidden;
+}
+
+.singleHomePageMovie > img{
+    width: 100%;
+    border-top-right-radius:10px ;
+    border-top-left-radius: 10px;
+}
+
+.singleHomePageMovie > img:hover{
+  transform: scale(1.01);
+  filter: brightness(1.0) contrast(1.07);
+}
+
+.singleHomePageMovie > div
+{
+    padding: 10px;
+    background-color: rgb(7, 50, 131);
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+    height: 100%;
+}
+
+.singleHomePageMovie > div> span{
+ background: rgb(0, 0, 0);
+ border-radius: 10px;
+ padding: 5px 8px;
+ color: #f8fcfc;
+ font-size: small;
+ font-weight:600;
+}
+
+#movie-backdrop{
+   align-self: baseline;
+}
+
+img#logo{
+    width: 15%;
+    border: none;
+    box-shadow: none;
+    border-radius: 0%;
+}
+
+  /* SINGLE MOVIE CSS  */
+
+.singleMovieInfo{
+   padding: 20px 0px;
+}  
+
+.singleMovieImageDiv > img {
+    width: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 5px solid rgba(22, 111, 171, 0.378);
+}
+
+.movieSectionDiv{
+ padding : 0px 30px;
+ justify-content: space-between;
+ color: white;
+}
+
+.crewHeader {
+color: rgb(255, 255, 255);
+text-align: center;
+font-size: 50px;
+padding-top: 5px;
+}
+
+.crewContainer {
+    gap: 55px;
+    padding: 25px 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(7, 7, 7);
+}
+
+.actorCrewList{
+    background-color: rgb(7, 50, 131);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.actorCrewList:nth-of-type(1) {
+    background-color:  rgba(22, 111, 171, 0.378);
+}
+
+.actorCrewList > img {
+    width: 100%;
+    overflow: hidden;
+}
+.actorCrewList > img:hover {
+  overflow: hidden;
+  transform: scale(1.01);
+  filter: brightness(1.0) contrast(1.07);
+}
+
+.actorCrewList > span {
+    padding: 10px 20px;
+}
+
+.videoSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+}
+.videoSection > h2 {
+color: rgb(255, 255, 255);
+text-align: center;
+font-size: 50px;
+padding-top: 5px;
+}
+.companiesSection{
+    background-color: rgb(2, 2, 2);
+    width: 100%;
+    padding: 20px 100px;
+}
+
+.companiesSection >h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 50px;
+    padding: 5px;
+
+}
+
+.companies{
+    padding: 20px 0;
+    display: flex; 
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    color: white;
+    gap: 10px;
+}
+
+.companies > div {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    width: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.299);
+    color: white;
+}
+
+.companies > div > h3 {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(7, 50, 131);
+    font-size: medium;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.companies > div > img {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+}
+
+.relatedMoviesContainer {
     width: 100%;
 }
 
-.container {
-    padding-top: 32px;
+.relatedMoviesContainer > h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 50px;
+    padding: 10px;
+    
 }
 
-#actors {
-    margin: 24px 16px 0 0;
+.relatedMoviesContainer > div {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.relatedMoviesContainer >div >div
+{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px black;
+    width: 240px;
+}
+.relatedMoviesContainer >div >div> img
+{
+    width: 100%;
+}
+
+.relatedMoviesContainer >div >div> span
+{
+    background-color: rgb(7, 50, 131);
+    color: white;   
+    width: 100%;
+    text-align: center;
+    font-size: small;
+    padding: 5px 0px;
+    height: 100%;
+}
+
+.movieListPageMovie > h5{
+    padding: 10px;
+    background-color: rgb(7, 50, 131);
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+    height: auto;
+    margin-bottom: 5px;
+    color: white;
+}
+.movieListPageImg{
+    color: white;
+    box-shadow: 0px 0px 8px rgb(7, 50, 131);
+    overflow: hidden;
+    border-top-right-radius:10px ;
+    border-top-left-radius: 10px;
+}
+
+.actorListPageActor > h5{
+    padding: 10px;
+    background-color: rgb(7, 50, 131);
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+    height: auto;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.actorListPageImg{
+    color: white;
+    box-shadow: 0px 0px 8px rgb(7, 50, 131);
+    overflow: hidden;
+    border-top-right-radius:10px ;
+    border-top-left-radius: 10px;
+}
+
+
+.footer{
+    display: grid;
+    background-color: black;
+    justify-content: center;
+    color: white;
+}
+.footer> p{
+  color: white;
+    text-align: center;
+}
+
+
+.github-links {
+  background-color: #060606;
+    display: flex;
+    align-items:center;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1300px) {
+    .homePageMovies{
+        grid-template-columns: 1fr 1fr ;
+        /* width: 600px; */
+    }
+
+    .github-links {
+       display: flex;
+       flex-direction: column;
+       margin: 5px;
+       align-items: center;
+    }
+
+}
+@media only screen and (max-width: 700px) {
+    .homePageMovies{
+        grid-template-columns: 1fr ;
+        /* width: 350px; */
+    }
+    
+}
+@media only screen and (max-width: 766px){
+
+    .singleMovieInfo{
+        align-items: center;
+        justify-content: center;
+    }
+    .videoSection > iframe{
+        height: 100px;
+        width: 200px;
+    }
+    .movieSectionDiv{
+        margin: 20px;
+        align-items: center;
+    }
+    .crewContainer{
+        align-items: center;
+        justify-content: center;
+    }
+    .actorImgContainer{
+        align-items: center;
+        justify-content: center;
+        /* width: 400px; */
+    }
+    .actor-info{
+        margin: 20px;
+      
+    }
 }
